@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="chaien"></td>
+        <td>
+            <select id="nobita">
+                <option value="a">VND</option>
+                <option value="b">USA</option>
+            </select>
+        </td>
+        <td>
+            <select id="doramon">
+                <option value="a">VND</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="a()" >Convert</button>
+        </td>
+    </tr>
+</table>
+<p style="color: cornflowerblue">result: <span id="result"></span></p>
+<script>
+function a() {
+    let chaien = document.getElementById('chaien').value
+    let nobita = document.getElementById('nobita').value
+    let doramon= document.getElementById('doramon').value
+    if (nobita==doramon){
+        document.getElementById('result').innerHTML= chaien
+    }
+    if (nobita=='a' && doramon=='b'){
+        document.getElementById('result').innerHTML= chaien/23000
+    }
+    if (nobita=='b'&& doramon=='a'){
+        document.getElementById('result').innerHTML=chaien*23000
+    }
+
+}
+</script>
+</body>
+</html>
