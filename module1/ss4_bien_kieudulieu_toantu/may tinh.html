@@ -17,32 +17,33 @@
         <td><button onclick="nhan()" value="*">Multipliacation(x)</button> </td>
         <td><button onclick="chia()" value="/">Division(/)</button> </td>
     </tr>
-    <p style="color: crimson">Result:  <span id="result"></span></p>
-    <script>
-        function cong() {
-            let dauvao1=parseInt((document.getElementById('nhap1')).value)
-            let dauvao2=parseInt((document.getElementById('nhap2')).value)
-            document.getElementById('result').innerHTML=dauvao1+dauvao2
-        }
-        function tru() {
-            let dauvao1=parseInt((document.getElementById('nhap1')).value)
-            let dauvao2=parseInt((document.getElementById('nhap2')).value)
-            document.getElementById('result').innerHTML=dauvao1-dauvao2
-        }
-        function nhan() {
-            let dauvao1=parseInt((document.getElementById('nhap1')).value)
-            let dauvao2=parseInt((document.getElementById('nhap2')).value)
-            document.getElementById('result').innerHTML=dauvao1*dauvao2
-        }
-        function chia() {
-            let dauvao1=parseInt((document.getElementById('nhap1')).value)
-            let dauvao2=parseInt((document.getElementById('nhap2')).value)
-            document.getElementById('result').innerHTML=dauvao1/dauvao2
 
-        }
-    </script>
 
 </table>
+<p style="color: crimson">Result:  <span id="result"></span></p>
 
+<script>
+    function cong() {
+        let dauvao1=parseInt((document.getElementById('nhap1')).value)
+        let dauvao2=parseInt((document.getElementById('nhap2')).value)
+        document.getElementById('result').innerHTML=dauvao1+dauvao2
+    }
+    function tru() {
+        let dauvao1=parseInt((document.getElementById('nhap1')).value)
+        let dauvao2=parseInt((document.getElementById('nhap2')).value)
+        document.getElementById('result').innerHTML=dauvao1-dauvao2
+    }
+    function nhan() {
+        let dauvao1=parseInt((document.getElementById('nhap1')).value)
+        let dauvao2=parseInt((document.getElementById('nhap2')).value)
+        document.getElementById('result').innerHTML=dauvao1*dauvao2
+    }
+    function chia() {
+        let dauvao1=parseInt((document.getElementById('nhap1')).value)
+        let dauvao2=parseInt((document.getElementById('nhap2')).value)
+        document.getElementById('result').innerHTML=dauvao1/dauvao2
+
+    }
+</script>
 </body>
 </html>

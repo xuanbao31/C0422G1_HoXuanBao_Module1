@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sales= parseInt(prompt('Enter your sales'))
+    let bonus
+    if (sales >=5000000){
+        bonus= sales*5/100
+                document.write('so tien nhan duoc'+ bonus)
+    }else if (sales>=7000000 && sales<1000000){
+        bonus=sales*7.5/100
+                document.write('so tien nhan cuoc'+ bonus)
+    }else if (sales>=10000000){
+        bonus=sales*9/100
+        document.write('so tien nhan duoc'+ bonus)
+    }
+</script>
+
+</body>
+</html>

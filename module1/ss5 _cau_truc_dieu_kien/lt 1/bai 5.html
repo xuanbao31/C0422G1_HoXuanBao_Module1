@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let baiKiemtra=parseInt(prompt('nhap diem bai kiem tra'))
+    let diemGiuaky=parseInt(prompt('nhap diem thi giua ki'))
+    let diemHocky=parseInt(prompt('nhap diem thi hoc ki'))
+    let sum = baiKiemtra+diemGiuaky*2+diemHocky*3
+    let avarage= sum/6
+    if (avarage>=8){
+        document.write('hoc luc gioi')
+    }else if (6.5<=avarage&&avarage<8){
+        document.write('hoc luc kha')
+    }else if (3.5<=avarage&&avarage<6.5){
+        document.write('hoc luc trung binh')
+    }else if (avarage<3.5){
+        document.write('o lai lop di cha')
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Enter your number'))
+    let b = parseInt(prompt('Enter your number '))
+    let c = parseInt(prompt('Enter your number'))
+    let denta = b*b -(4*a*c)
+    let x1
+    let x2
+    if (denta<0){
+        document.write('phuong trinh vo nghiem')
+    }else if (denta==0){
+        x1= -b/2*a
+        x2 = x1
+        document.write('nghiem 1 : '+x1 + ' '+ 'nghiem 2 : '+x2)
+    }else if (denta>0){
+        x1 = (-b + Math.sqrt(denta)) /(2*a)
+        x2 =(-b - Math.sqrt(denta)) /(2*a)
+        document.write('nghiem 1 : '+x1)
+        document.write('nghiem 2 : '+x2)
+    }
+
+
+
+</script>
+
+</body>
+</html>
