@@ -4,12 +4,108 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<table>
+<body style="background: darksalmon">
+<table align="center" border="" >
     <tr>
-        <th colspan="4"></th>
+        <th colspan="4"><input type="text" id="nhap du lieu"></th>
     </tr>
+    <tr>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh(1)">1</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh(2)">2</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh(3)">3</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh(4)">4</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh(5)">5</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh(6)">6</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh('-')">-</button>
+        </td>
+    </tr>
+    <td>
+        <button style="color: dodgerblue" onclick="tinh(7)">7</button>
+    </td>
+    <td>
+        <button style="color: dodgerblue" onclick="tinh(8)">8</button>
+    </td>
+    <td>
+        <button style="color: dodgerblue" onclick="tinh(9)">9</button>
+    </td>
+    <td>
+        <button style="color: dodgerblue" onclick="tinh('*')">*</button>
+    </td>
+    <tr>
+        <td>
+            <button style="color: dodgerblue" onclick="reset()">C</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh(0)">0</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="data()">=</button>
+        </td>
+        <td>
+            <button style="color: dodgerblue" onclick="tinh('/')">/</button>
+        </td>
+    </tr>
+
 </table>
+
+<h1 id="display">em co thich a ko?</h1>
+<button id="co" onclick="co()">co</button>
+<button id="khong" onclick="khong()">khong</button>
+<h1 id="conhieu" onclick="conhieu()">dung co xao</h1>
+<h1 id="display1">anh cung thich e lam</h1>
+<script>
+    function tinh(num) {
+        document.getElementById('nhap du lieu').value = document.getElementById('nhap du lieu').value + num
+    }
+
+    function data() {
+        let ketqua = document.getElementById('nhap du lieu').value
+        document.getElementById('nhap du lieu').value = eval(ketqua)
+        document.getElementById("display").style.display ="block";
+
+        document.getElementById("co").style.display = "block";
+        document.getElementById("khong").style.display = "block";
+
+    }
+
+    function reset() {
+        document.getElementById('nhap du lieu').value = ' '
+        document.getElementById("display").style.display="none"
+    }
+
+    document.getElementById("display").style.display = "none";
+    document.getElementById("display1").style.display = "none";
+    document.getElementById("co").style.display = "none";
+    document.getElementById("khong").style.display = "none";
+    document.getElementById("conhieu").style.display = "none";
+
+    function co() {
+       document.getElementById("display1").style.display = "block";
+        document.getElementById("khong").style.display = "none";
+    }
+    function khong() {
+        document.getElementById("khong").style.display = "none";
+        document.getElementById("conhieu").style.display = "block";
+    }
+</script>
 
 </body>
 </html>

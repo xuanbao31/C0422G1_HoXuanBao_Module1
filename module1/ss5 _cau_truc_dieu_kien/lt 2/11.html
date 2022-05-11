@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tinh thue thu nhap ca nhan theo nam</h3>
+<script>
+    let incom = parseInt(prompt('nhap so tien ban kiem dc trong 1 nam'))
+    let thue
+    if (incom==6000000){
+        thue=incom*5/100
+        document.write('so thue ban phai tra : '+ thue)
+    }else if (incom>6000000&&incom<=120000000){
+        thue=incom*10/100
+        document.write('so thue ban phai tra : '+ thue)
+    }else if (incom<=216000000){
+        thue=incom*15/100
+        document.write('so thue ban phai tra : '+ thue)
+    }else if (incom<=384000000){
+        thue=incom*20/100
+        document.write('so thue ban phai tra : '+ thue)
+    }else if (incom<=624000000){
+        thue=incom*25/100
+        document.write('so thue ban phai tra : '+ thue)
+    }else if (incom<=960000000){
+        thue=incom*30/100
+        document.write('so thue ban phai tra : '+ thue)
+    }else if (incom>960000000) {
+        thue=incom*35/100
+        document.write('so thue ban phai tra : '+ thue)
+    }
+
+</script>
+
+</body>
+</html>
