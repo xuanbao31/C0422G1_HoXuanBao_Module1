@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Từ Điển</h2>
+Nhập Từ:<input type="text" id="thongtin">
+<button onclick="timkiem()">Search</button>
+<p id="hienthi"></p>
+<script>
+    let English = ["run", "swim", "football", "basketball", "badminton", "sing"]
+    let Vietnam = ["chạy", "bơi", "bóng đá", "bóng rổ", "cầu lông", "hát"]
+
+    function timkiem() {
+        let flag=false
+        let vocabulary = document.getElementById('thongtin').value
+        for (let i = 0; i < English.length; i++) {
+            if (vocabulary === English[i]) {
+                flag = true
+                document.getElementById('hienthi').innerHTML = Vietnam[i]
+                break;
+            } else if (vocabulary === Vietnam[i]) {
+                flag = true
+                document.getElementById('hienthi').innerHTML = English[i]
+                break;
+            }
+        }
+        if (flag===false){
+            document.getElementById('hienthi').innerHTML=document.write('khong co trong tu dien')
+        }
+
+    }
+</script>
+
+
+</body>
+</html>

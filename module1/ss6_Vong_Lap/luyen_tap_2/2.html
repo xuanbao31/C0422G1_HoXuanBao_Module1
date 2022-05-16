@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=parseInt(prompt('Enter your number'))
+    let giaiThua=1
+    let sout = "1";
+    for (i=1;i<=number;i++){
+        giaiThua=giaiThua*i
+        if(i > 1){
+            sout = sout + "*" + i;
+        }
+    }
+    document.write(sout + "=" + giaiThua)
+
+</script>
+
+</body>
+</html>
