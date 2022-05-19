@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = []
+    for (let i = 0; i < 5; i++) {
+        number[i] = prompt('Enter your number')
+    }
+    document.write(number + '<br>')
+    let V = prompt('Enter your number')
+    for (let i = number.length; i >= 0; i--) {
+        if (V == number[i]) {
+            for (let j = i; j < number.length; j++) {
+                number[j] = number[j + 1]
+                if (j == number.length - 1) {
+                    number[j] = 0
+            }
+
+            }
+        }
+    }
+    document.write(number)
+
+
+</script>
+
+</body>
+</html>

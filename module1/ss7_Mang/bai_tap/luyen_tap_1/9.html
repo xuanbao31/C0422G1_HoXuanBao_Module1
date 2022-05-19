@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<script>
+   let num1=[]
+    let num2=[]
+    for (i=0;i<3;i++){
+        arr1=parseInt(prompt('nhap so'+i+1))
+        num1.push(arr1)
+    }for (j=0;j<3;j++){
+        arr2=parseInt(prompt('nhap so '+j+1))
+       num2.push(arr2)
+   }
+    let arr3=[]
+    for(let value of num1){
+        arr3.push(value)
+
+
+    }for (let value of num2){
+        arr3.push(value)
+   }
+    document.write(num1+'<br>')
+    document.write(num2+'<br>')
+    document.write(arr3)
+
+</script>
+
+</body>
+</html>

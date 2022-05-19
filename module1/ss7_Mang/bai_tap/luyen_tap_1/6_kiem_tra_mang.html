@@ -6,14 +6,24 @@
 </head>
 <body>
 <script>
-    let number=['1','2','3','4','9','10','12','11','17']
-    let check=prompt('Enter your number')
-    for (i=0;i=number.length;i++){
-        if (check===number[i]){
-            document.write('V is')
+    let number = []
+    for (let i = 0; i < 10; i++) {
+        number[i] = parseInt(prompt('Enter your number'))
+
+    }
+    document.write(number + '<br>')
+    let flag = false
+    let checker = prompt('enteryournumber')
+    for (let i = 0; i < number.length; i++) {
+        if (checker === number[i]) {
+            flag = true
         }
     }
-
+    if (flag === true) {
+        document.write('V is in the array')
+    } else {
+        document.write('V is not in the array')
+    }
 
 
 </script>

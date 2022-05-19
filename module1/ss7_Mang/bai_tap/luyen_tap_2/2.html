@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name = []
+    let first = 0
+    let last = name.length - 1
+    while (first < last) {
+        let b = name[first];
+        name[first] = name[last]
+        name[last] = b
+        first++
+        last--
+    }
+    document.write(name)
+
+
+</script>
+
+</body>
+</html>
