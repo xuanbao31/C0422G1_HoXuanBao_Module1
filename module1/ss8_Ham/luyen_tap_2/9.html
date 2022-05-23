@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = ['b', 'a', 'o', 'd', 'e', 'p', 't', 'r', 'a', 'i', 'q', 'u', 'a', 'd', 'i']
+    document.write(string + '<br>')
+    let check = prompt('Nhap ki tu ban muon kiem tra')
+
+    function kiemTra() {
+        let count = 0
+        let flag = false
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] === check) {
+                flag = true
+                count++
+            }
+
+        }if (flag === false) {
+            document.write('-1' + '<br>')
+    }
+
+return count
+    }
+
+    let sum = kiemTra(string)
+    document.write('ki tu ' + check + ' ' + 'xuat hien' + sum + 'lan')
+
+
+</script>
+</body>
+</html>

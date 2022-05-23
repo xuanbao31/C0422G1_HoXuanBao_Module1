@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt('Enter your number'))
+
+    function isPrime(Number) {
+        let flag = true
+        for (let i = 2; i < Number; i++) {
+            if (Number % i === 0) {
+                flag = false
+                break;
+            }
+        }
+        if (flag === true) {
+            document.write(Number + 'la so nguyen to')
+        }else {
+            document.write(Number + 'khong phai la so nguyen to')
+        }
+    }
+    isPrime(num)
+</script>
+
+</body>
+</html>

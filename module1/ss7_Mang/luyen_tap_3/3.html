@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt('Enter the number of terms: '));
+    for (let i = 0; i <= numbers; i++) {
+        let snt = true;
+        if (i<2) {
+            snt = false
+        } else {
+            for (let j = 2; j < i; i++) {
+                if (i % j === 0) {
+                    snt = false
+                    break;
+                }
+
+            }
+
+        }
+        if (snt === false) {
+            document.write(i + '<br>')
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

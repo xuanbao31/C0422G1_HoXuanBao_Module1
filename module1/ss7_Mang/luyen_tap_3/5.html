@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fiboanci
+    let n1 = 0
+    let n2 = 1
+    let dayfiboanci = []
+    for (let i = 0; i < 10000; i++) {
+        fiboanci = n1 + n2
+        n1 = n2
+        n2 = fiboanci
+        dayfiboanci.push(fiboanci)
+        // document.write(n1+'<br>')
+
+    }
+    let i = 2
+    let songuento = []
+
+    while (i < 10000) {
+        let snt = true
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                snt = false
+                break;
+            }
+        }
+        if (snt === true) {
+            // document.write(i + '<br>')
+            songuento.push(i)
+        }
+        i++
+    }
+    console.log(songuento)
+
+    for (let i = 0; i < 10000; i++) {
+        if (songuento.includes(i) && dayfiboanci.includes(i)) {
+            document.write(i+'<br>')
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

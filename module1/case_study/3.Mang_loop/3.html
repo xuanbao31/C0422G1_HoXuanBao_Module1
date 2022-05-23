@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators=[]
+    let denominators=[]
+    let max=numerators[0]/denominators[0]
+    let index=0
+    let a =parseInt(prompt('Nhap so luong phan so'))
+    for (let i = 0; i <a ; i++) {
+        numerators[i]=parseInt(prompt('nhap tu so '+(i+1)))
+        denominators[i]=parseInt(prompt('nhap mau so '+(i+1)))
+    }
+    for (let i = 0; i <numerators.length ; i++) {
+        if (max<numerators[i]/denominators[i]){
+            max=numerators[i]/denominators[i]
+            index=i
+        }
+    }
+document.write('tu so : ' +numerators+'<br>' )
+    document.write('mau so : '+ denominators+'<br>')
+    document.write('chi so cua phan so lon nhat: '+index)
+
+</script>
+
+</body>
+</html>

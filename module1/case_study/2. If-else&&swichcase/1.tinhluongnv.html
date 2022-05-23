@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng
+        (số tiền lương thực sự mà nhân viên đó nhận được).</title>
+</head>
+<body>
+<script>
+    let a =parseInt(prompt('nhap so luong'))
+    let luongNhanvien = a;
+    let thue
+    let tienluongNhanduoc
+    if (luongNhanvien = 15000000) {
+        thue = 15000000 * 20 / 100
+        tienluongNhanduoc = luongNhanvien - thue
+    }
+    if (luongNhanvien = 7000000 && luongNhanvien < 15000000) {
+        thue = luongNhanvien * 10 / 100
+        tienluongNhanduoc = luongNhanvien - thue
+    } else if (luongNhanvien < 7000000) {
+        thue = luongNhanvien * 5 / 100
+        tienluongNhanduoc = luongNhanvien - thue
+    }
+    document.write('voi so luong : ' + luongNhanvien + '<br>')
+    document.write('so thue ban phai tra : ' + thue + '<br>')
+    document.write('so tien ban nhan duoc sau thue : ' + tienluongNhanduoc)
+
+
+</script>
+
+</body>
+</html>

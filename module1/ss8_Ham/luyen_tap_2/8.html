@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = []
+    for (let i = 0; i < 5; i++) {
+        number[i] = parseInt(prompt('Enter your number'))
+    }
+
+    function sum() {
+        let first = 0;
+        let last = number.length - 1;
+        while (first < last) {
+            let b = number[first];
+            number[first] = number[last]
+            number[last] = b;
+            first++;
+            last--;
+        }
+
+    }
+
+    sum()
+    document.write(number)
+</script>
+
+</body>
+</html>

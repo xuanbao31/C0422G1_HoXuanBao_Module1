@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Array() {
+        let min = number[0]
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] < min) {
+                min = number[i]
+            }
+        }
+        return min
+    }
+let number=[]
+let b = parseInt(prompt('so luong so tu nhien muon so sanh'))
+    for (let j = 0; j <b ; j++) {
+        number[j]=parseInt(prompt('nhap so tu nhien thu'+(j+1)))
+    }
+    document.write(number+'<br>')
+    let sum = Array()
+    document.write(Array(sum))
+</script>
+
+</body>
+</html>

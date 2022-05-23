@@ -8,11 +8,13 @@
 <script>
     let number1 = prompt()
     let number2 = prompt()
-    if (number1.length !== number2.length) {
-        document.write('2 chuoi khong giong nhau')
-    }else
     for (let i = 0; i < number1.length; i++) {
-        if (number1)
+        if (number1.length !== number2.length) {
+            document.write('2 chuoi khong giong nhau')
+            break;
+        } else if (number2[i] == number1[i]) {
+            document.write('2 chuoi giong nhau')
+        }
 
 
     }
