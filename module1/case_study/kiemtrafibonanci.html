@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Enter your number'))
+    let d = []
+    let b = 0
+    let c = 1
+    let sum
+        for (let i = 0; i < 200; i++) {
+            document.write(b+'<br>')
+            sum = b + c
+            b = c
+            c = sum
+            d.push(b)
+        }
+    for (let i = 0; i < d.length; i++) {
+        if (d[i] === a) {
+            document.write(a + ' day la fiboanci')
+        }
+    }
+
+</script>
+
+</body>
+</html>
