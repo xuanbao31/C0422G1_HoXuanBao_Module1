@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = parseInt(prompt('Nhap so luong mang'))
+    let number2 = parseInt(prompt('Nhap so luong phan tu co trong mang '))
+    let arr = []
+    for (let i = 0; i < number1; i++) {
+        arr[i] = []
+        document.write('[')
+        for (let j = 0; j < number2; j++) {
+            arr[i][j] = parseInt(prompt('nhap so phan tu trong mang '))
+            document.write(arr[i][j] + ',')
+        }
+        document.write(']' + '<br>')
+    }
+
+    function snt(n) {
+        let flag = true
+        if (n < 2) {
+            return false
+        }
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                flag = false
+                break;
+            }
+        }
+        return flag
+    }
+
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (snt(arr[i][j])) {
+                document.write(arr[i][j]+',')
+                count++
+            }
+        }
+    }document.write('<br>')
+    document.write('so luong so nguyen to co trong mang : '+count)
+
+
+</script>
+
+</body>
+</html>

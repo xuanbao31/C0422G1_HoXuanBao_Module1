@@ -5,6 +5,76 @@
     <title>Title</title>
 </head>
 <body>
+<div>
+    <h4>
+        1.Cafe <br>
+        2.Cam vắt <br>
+        3.Nước ép cà rốt <br>
+        4.Nước ép cà chua <br>
+        5.Nước lọc <br>
+        6.Nước dừa <br>
+        7.Exit
+    </h4>
+</div>
+<button onclick="drink()" style="width: 35%">Shopping</button>
+<script>
+    function quality(x) {
+        switch (x) {
+            case 1:
+                return parseInt(prompt('Cafe co gia la 15000 moi ban nhap so luong'))
+            case 2:
+                return parseInt(prompt('Cam vat co gia la 30000 moi ban nhap so luong'))
+            case 3:
+                return parseInt(prompt('Nuoc ep ca rot co gia la 35000 moi ban nhap so luong'))
+            case 4:
+                return parseInt(prompt('Nuoc ep ca chua co gia la 35000 moi ban nhap so luong'))
+            case 5:
+                return parseInt(prompt('Nuoc loc co gia la 7000 moi ban nhap so luong'))
+            case 6:
+                return parseInt(prompt('Nuoc dua co gia la 30000 moi ban nhap so luong'))
+
+        }
+
+    }
+    function giaca(x) {
+        switch (x) {
+            case 1 : return 15000
+            case 2: return 30000
+            case 3 : return 35000
+            case 4: return 35000
+            case 5 : return 7000
+            case 6: return 30000
+        }
+
+    }function drink() {
+        let index=0
+        let drinks
+
+        do {
+            index = parseInt(prompt('nhap so ban muon'))
+            if (index > 7 || index <= 0) {
+                index = parseInt(prompt('nhap lai so'))
+            }
+           let num = quality(index)
+            if (index <7) {
+                drinks = giaca(index)
+                let sum = num*drinks
+                alert('tong tien' + '=' + sum)
+
+
+            }
+        } while (index === 7)
+                }
+
+
+
+</script>
+
+
+
+
+
+
 
 </body>
 </html>

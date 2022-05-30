@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body style="background: lemonchiffon">
+<div id="pika"></div>
 <div id="game"></div>
 <script>
     class Hero {
@@ -23,26 +24,62 @@
         }
 
         moveRight() {
-            this.left += 25;
+            this.left += 1;
             console.log('ok : ' + this.left);
         }
 
     }
 
-    let hero = new Hero("pikachu.png", 50, 30, 200);
+    let hero = new Hero("pikachu.png", 50, 30, 320);
+    let siro = new Hero("pikachu.png",50,350,320)
 
     function start() {
         if (hero.left < window.innerWidth - hero.size) {
             hero.moveRight();
+            siro.moveRight();
         }
         document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 500)
+        document.getElementById('pika').innerHTML = siro.getHeroElement();
         setTimeout(start, 500)
     }
 
     start()
 
-
-</script>
+    // class Siro {
+    //     constructor(image, top, left, size) {
+    //         this.image = image;
+    //         this.top = top;
+    //         this.left = left;
+    //         this.size = size;
+    //     }
+    //
+    //     getSiroElement() {
+    //         return '<img width="' + this.size + '"' +
+    //             ' height="' + this.size + '"' +
+    //             ' src="' + this.image + '"' +
+    //             ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+    //     }
+    //
+    //     moveRight() {
+    //         this.left += 25;
+    //         console.log('ok : ' + this.left);
+    //     }
+    //
+    // }
+    //
+    // let siro = new Siro("pikachu.png", 50, 30, 320);
+    //
+    // function start() {
+    //     if (siro.left < window.innerWidth - siro.size) {
+    //         siro.moveRight();
+    //     }
+    //     document.getElementById('pika').innerHTML = siro.getSiroElement();
+    //     setTimeout(start, 500)
+    // }
+    //
+    // start()
+    </script>
 
 </body>
 </html>
