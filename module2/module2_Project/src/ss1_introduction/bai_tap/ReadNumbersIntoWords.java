@@ -127,7 +127,6 @@ public class ReadNumbersIntoWords {
                     break;
             }
         } else if (number >= 100 && number < 1000) {
-
             int hundreds = number / 100;
             int tens = (number / 10) % 10;
             int units = number % 10;
