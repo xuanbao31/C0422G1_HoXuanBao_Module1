@@ -1,4 +1,4 @@
-package ss5_accessmodifier_staticmethod_staticproperty.bai_tap;
+package ss5_accessmodifier_staticmethod_staticproperty.bai_tap.Circle;
 
 import ss1_introduction.thuc_hanh.Area;
 

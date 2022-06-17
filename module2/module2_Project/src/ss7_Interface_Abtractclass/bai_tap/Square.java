@@ -1,8 +1,16 @@
-package ss6_ke_thua.thuc_hanh;
+package ss7_Interface_Abtractclass.bai_tap;
 
-public class Square extends Rectangle {
+import ss6_ke_thua.thuc_hanh.Rectangle;
+
+public class Square extends Rectangle implements Resizeable {
+    private  double size=1;
+
+
+
     public Square() {
+
     }
+
 
     public Square(double side) {
         super(side, side);
@@ -37,5 +45,10 @@ public class Square extends Rectangle {
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        size+=size*percent/100;
     }
 }

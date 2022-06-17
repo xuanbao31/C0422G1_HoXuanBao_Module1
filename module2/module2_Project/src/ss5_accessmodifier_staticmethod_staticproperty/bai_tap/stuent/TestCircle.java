@@ -1,6 +1,6 @@
-package ss5_accessmodifier_staticmethod_staticproperty.bai_tap;
+package ss5_accessmodifier_staticmethod_staticproperty.bai_tap.stuent;
 
-import ss5_accessmodifier_staticmethod_staticproperty.bai_tap.Circle;
+import ss5_accessmodifier_staticmethod_staticproperty.bai_tap.Circle.Circle;
 
 import java.util.Scanner;
 

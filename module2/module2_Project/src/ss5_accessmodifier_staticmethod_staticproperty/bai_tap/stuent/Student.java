@@ -1,4 +1,4 @@
-package ss5_accessmodifier_staticmethod_staticproperty.bai_tap;
+package ss5_accessmodifier_staticmethod_staticproperty.bai_tap.stuent;
 
 public class Student {
     private String name;
