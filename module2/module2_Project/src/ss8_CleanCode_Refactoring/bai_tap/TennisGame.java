@@ -1,10 +1,10 @@
 package ss8_CleanCode_Refactoring.bai_tap;
 
 public class TennisGame {
-    final static  int LOVE = 0;
-    final static int FIFTEEN = 1;
-    final static int THIRTY = 2;
-    final static int FORTY = 3;
+    private final static  int LOVE = 0;
+    private final static int FIFTEEN = 1;
+    private final static int THIRTY = 2;
+    private final static int FORTY = 3;
 
     public static String tieScore(int score) {
         switch (score) {
@@ -22,7 +22,7 @@ public class TennisGame {
         }
     }
 
-    public static String advantagePlayer (String player1Name, String player2Name, int player1Score, int player2Score) {
+    private static String advantagePlayer (String player1Name, String player2Name, int player1Score, int player2Score) {
         int minusResult = player1Score - player2Score;
         if (minusResult == 1) {
             return "Advantage " + player1Name;
@@ -35,7 +35,7 @@ public class TennisGame {
         }
     }
 
-    public static String underDeuce(int player1Score, int player2Score) {
+    private static String underDeuce(int player1Score, int player2Score) {
         int tempScore;
         StringBuilder score = new StringBuilder();
         for (int i = 1; i < 3; i++) {
@@ -62,7 +62,7 @@ public class TennisGame {
         return score.toString();
     }
 
-    public static String getScore(String player1Name, String player2Name, int player1Score, int player2Score) {
+    private static String getScore(String player1Name, String player2Name, int player1Score, int player2Score) {
         String score;
         boolean isDeuce = player1Score == player2Score;
         if (isDeuce) {
