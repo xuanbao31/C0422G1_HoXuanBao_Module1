@@ -3,7 +3,7 @@ package ss7_Interface_Abtractclass.bai_tap;
 import ss6_ke_thua.thuc_hanh.Shape;
 
 public class Circle extends Shape implements Resizeable {
-    public double radius;
+    private double radius;
 
     public Circle(String color, boolean filled, double radius) {
         super(color, filled);
