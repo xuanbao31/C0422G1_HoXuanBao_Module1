@@ -1,4 +1,4 @@
-package ss14_Debug_Fig.bai_tap;
+package ss15_Debug_Fig.bai_tap;
 
 public class TriangleTest {
     private double a;

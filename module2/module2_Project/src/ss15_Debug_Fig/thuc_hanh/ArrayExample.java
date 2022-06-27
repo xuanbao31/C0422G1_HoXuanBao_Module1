@@ -1,4 +1,4 @@
-package ss14_Debug_Fig.thuc_hanh;
+package ss15_Debug_Fig.thuc_hanh;
 
 import java.util.Random;
 import java.util.Scanner;
