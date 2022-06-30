@@ -1,4 +1,4 @@
-package ss16_IO_TextFile.Thuc_hanh;
+package ss16_IO_TextFile.Bai_tap.DocFile;
 
 import java.io.*;
 import java.util.ArrayList;

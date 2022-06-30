@@ -87,4 +87,7 @@ public class FacilityServiceImpl implements FacilityService {
         House house = new House(tieuChuanPhong, soTang);
         arrayList.add(house);
     }
+    public void edit(){
+        System.out.println("Nhập ");
+    }
 }

@@ -21,14 +21,40 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    public void add() {
+        System.out.println("Nhập tên");
+        String name = scanner.nextLine();
+        System.out.println("Nhập ngày sinh");
+        int birth = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập email");
+        String email = scanner.nextLine();
+        System.out.println("Nhập CMND");
+        int numberCMND = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập số điện thoại ");
+        int numberPhone = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập giới tính");
+        String gender = scanner.nextLine();
+        System.out.println("Nhập mã nhân viên");
+        int codeNhanVien = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập trình độ");
+        String trinhDo = scanner.nextLine();
+        System.out.println("Nhập vị trí");
+        String viTri = scanner.nextLine();
+        System.out.println("Nhập lương");
+        double luong = Double.parseDouble(scanner.nextLine());
+        arrayList.add(new Employee(name, birth, email, numberCMND, numberPhone, gender, codeNhanVien, trinhDo, viTri, luong));
+
+    }
+
+    @Override
     public void edit() {
         do {
             System.out.println("Nhập mã nhân viên ");
-            Integer maNhanVien = Integer.parseInt(scanner.nextLine());
+            int maNhanVien = Integer.parseInt(scanner.nextLine());
             boolean check = false;
             for (int i = 0; i < arrayList.size(); i++) {
                 if (maNhanVien == arrayList.get(i).getCodeNhanVien()) {
-                    check=true;
+                    check = true;
                     System.out.println("Nhập tên muốn sửa");
                     String name = scanner.nextLine();
                     System.out.println("Nhập ngày sinh muốn sửa");
@@ -46,17 +72,17 @@ public class EmployeeServiceImpl implements EmployeeService {
                     System.out.println("Vị trí");
                     String viTri = scanner.nextLine();
                     System.out.println("Nhập Lương");
-                    double luong= Double.parseDouble(scanner.nextLine());
-                    int id=arrayList.get(i).getCodeNhanVien();
+                    double luong = Double.parseDouble(scanner.nextLine());
+                    int id = arrayList.get(i).getCodeNhanVien();
                     arrayList.remove(arrayList.get(i));
-                    arrayList.add(new Employee(name,day,email,numberCMND,phoneNumber,gender,id,trinhDo,viTri,luong));
+                    arrayList.add(new Employee(name, day, email, numberCMND, phoneNumber, gender, id, trinhDo, viTri, luong));
                     return;
                 }
             }
-            if (check){
+            if (check) {
                 System.out.println("Nhập lại mã nhân viên ");
             }
-        }while (true);
+        } while (true);
 
 
     }
@@ -69,10 +95,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-    @Override
-    public void add() {
 
-
-    }
 }
 

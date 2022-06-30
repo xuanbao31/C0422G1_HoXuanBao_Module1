@@ -1,6 +1,7 @@
 package ss16_IO_TextFile.Thuc_hanh;
 
-import ss16_IO_TextFile.Bai_tap.ReadFile;
+import ss16_IO_TextFile.Bai_tap.CopyList.ReadFile;
+//import ss16_IO_TextFile.Bai_tap.ReadFile;
 
 import java.util.List;
 
