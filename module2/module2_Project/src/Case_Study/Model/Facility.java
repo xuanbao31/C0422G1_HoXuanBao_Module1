@@ -6,13 +6,14 @@ public abstract class  Facility {
  private double chiPhiThue;
  private int soLuongNguoiToiDa;
  private String kieuThue;
-
-    public Facility(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, String kieuThue) {
+private int id;
+    public Facility(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, String kieuThue,int id) {
         this.tenDichVu = tenDichVu;
         this.dienTichSuDung = dienTichSuDung;
         this.chiPhiThue = chiPhiThue;
         this.soLuongNguoiToiDa = soLuongNguoiToiDa;
         this.kieuThue = kieuThue;
+        this.id =id;
     }
 
     public Facility() {
@@ -59,6 +60,14 @@ public abstract class  Facility {
         this.kieuThue = kieuThue;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Facility{" +
@@ -66,7 +75,7 @@ public abstract class  Facility {
                 ", dienTichSuDung=" + dienTichSuDung +
                 ", chiPhiThue=" + chiPhiThue +
                 ", soLuongNguoiToiDa=" + soLuongNguoiToiDa +
-                ", kieuThue='" + kieuThue + '\'' +
+                ", kieuThue='" + kieuThue + '\'' +"id=' '"+id+
                 '}';
     }
 

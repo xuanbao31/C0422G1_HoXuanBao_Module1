@@ -15,6 +15,7 @@ public class ReadWrite {
                 String[] arr = line.split(",");
                 list.add(new Country(Integer.parseInt(arr[0]), (arr[1]), (arr[2])));
             }
+            br.close();
         } catch (Exception e) {
             System.err.println("Fie không tồn tại or nội dung có lỗi!");
         }

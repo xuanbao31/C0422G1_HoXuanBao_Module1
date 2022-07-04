@@ -1,15 +1,10 @@
 package Case_Study.Controller;
 
-import Case_Study.Service.Impl.CustomerServiceImpl;
-import Case_Study.Service.Impl.EmployeeServiceImpl;
-import Case_Study.Service.Impl.FacilityServiceImpl;
+
 
 import java.util.Scanner;
 
 public class FuramaController {
-    public static void main(String[] args) {
-        displayMainMenu();
-    }
     public static void displayMainMenu() {
         Scanner scanner = new Scanner(System.in);
         boolean check = true;
@@ -53,20 +48,21 @@ public class FuramaController {
                     "\n 3. Edit employee" +
                     "\n 4. Return main menu");
             String number = scanner.nextLine();
-            switch (number){
+            switch (number) {
                 case "1":
-                    EmployeeServiceImpl employeeService=new EmployeeServiceImpl();
+                    EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
                     employeeService.display();
                     break;
                 case "2":
-                    EmployeeServiceImpl employeeService1=new EmployeeServiceImpl();
+                    EmployeeServiceImpl employeeService1 = new EmployeeServiceImpl();
                     employeeService1.add();
                     break;
                 case "3":
-                    EmployeeServiceImpl employeeService2=new EmployeeServiceImpl();
+                    EmployeeServiceImpl employeeService2 = new EmployeeServiceImpl();
                     employeeService2.edit();
                     break;
                 case "4":
+                    displayMainMenu();
 
             }
         }
@@ -80,20 +76,25 @@ public class FuramaController {
                     "\n 2. Add new customer" +
                     "\n 3. Edit customer" +
                     "\n 4. Return main menu");
-        }
-        String number = scanner.nextLine();
-        switch (number){
-            case "1":
-                CustomerServiceImpl customerService=new CustomerServiceImpl();
-                customerService.display();
-            case "2":
-                CustomerServiceImpl customerService1=new CustomerServiceImpl();
-                customerService1.add();
-            case "3":
-                CustomerServiceImpl customerService2=new CustomerServiceImpl();
-                customerService2.edit();
-                case "4":
 
+            String number = scanner.nextLine();
+            switch (number) {
+                case "1":
+                    CustomerServiceImpl customerService = new CustomerServiceImpl();
+                    customerService.display();
+                    break;
+                case "2":
+                    CustomerServiceImpl customerService1 = new CustomerServiceImpl();
+                    customerService1.add();
+                    break;
+                case "3":
+                    CustomerServiceImpl customerService2 = new CustomerServiceImpl();
+                    customerService2.edit();
+                    break;
+                case "4":
+                    displayMainMenu();
+
+            }
         }
     }
 
@@ -105,16 +106,24 @@ public class FuramaController {
                     "\n 2. Add new customer" +
                     "\n 3. Edit customer" +
                     "\n 4. Return main menu");
-        }
-        String number = scanner.nextLine();
-        switch (number){
-            case "1":
-                FacilityServiceImpl facilityService=new FacilityServiceImpl();
-                facilityService.display();
-            case "2":
-                FacilityServiceImpl facilityService1=new FacilityServiceImpl();
-                facilityService1.add();
-            case "3":
+
+            String number = scanner.nextLine();
+            switch (number) {
+                case "1":
+                    FacilityServiceImpl facilityService1 = new FacilityServiceImpl();
+                    facilityService1.display();
+                    break;
+                case "2":
+                    FacilityServiceImpl facilityService2 = new FacilityServiceImpl();
+                    facilityService2.add();
+                    break;
+                case "3":
+                    FacilityServiceImpl facilityService3 = new FacilityServiceImpl();
+                    facilityService3.edit();
+                    break;
+                case "4":
+                    displayMainMenu();
+            }
         }
     }
 

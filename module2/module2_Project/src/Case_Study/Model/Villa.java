@@ -5,8 +5,8 @@ public class Villa extends Facility{
     private double dienTichHoBoi;
     private int soTang;
 
-    public Villa(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, String kieuThue, String tieuChuanPhong, double dienTichHoBoi, int soTang) {
-        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
+    public Villa(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, String kieuThue, String tieuChuanPhong, double dienTichHoBoi, int soTang,int id) {
+        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue,id);
         this.tieuChuanPhong = tieuChuanPhong;
         this.dienTichHoBoi = dienTichHoBoi;
         this.soTang = soTang;
@@ -48,6 +48,7 @@ public class Villa extends Facility{
     @Override
     public String toString() {
         return "Villa{" +
+                super.toString()+
                 "tieuChuanPhong='" + tieuChuanPhong + '\'' +
                 ", dienTichHoBoi=" + dienTichHoBoi +
                 ", soTang=" + soTang +
